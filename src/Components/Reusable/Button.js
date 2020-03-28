@@ -1,10 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Button = () => {
+const StyledButton = styled.button`
+
+`
+
+const Button = (props) => {
     return (
-        <div>
-            
-        </div>
+    <StyledButton>{props.text}</StyledButton>
     )
 } 
 
