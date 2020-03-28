@@ -1,10 +1,14 @@
 import React from 'react';
+import NavBar from '../Components/Reusable/NavBar';
+import Footer from '../Components/Reusable/Footer';
 
 const LandingPage = () => {
 
     return (
         <div>
-            Hello world
+            <NavBar />
+            Home page though
+            <Footer />
         </div>
     )
 }
