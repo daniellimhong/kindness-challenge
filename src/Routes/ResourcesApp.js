@@ -5,10 +5,9 @@ import AddModal from "../Components/Resources/AddModal";
 import Footer from "../Components/Reusable/Footer";
 import LocationSearch from "../Components/Reusable/LocationSearch";
 import CategorySelector from "../Components/Resources/CategorySelector";
-import ResourcesContainer from '../Components/Resources/ResourcesContainer';
+import ResourcesContainer from "../Components/Resources/ResourcesContainer";
 import { Container, Button, Input, Text } from "../StyledComponents";
-import { resourcesData } from '../data'
-
+import { resourcesData } from "../data";
 
 const ResourcesApp = () => {
   const [zip, setZip] = useState(0);
@@ -17,29 +16,28 @@ const ResourcesApp = () => {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    setResources(resourcesData)
-  }, [])
+    setResources(resourcesData);
+  }, []);
 
-  console.log(resources)
+  console.log(resources);
 
   return (
-    <Container width="100%" display="flex" alignItems="center" justifyContent="center">
+    <Container
+      width="100%"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
       <NavBar />
       {/* <LocationSearch
         setZip={setZip}
       /> */}
       {/* {`Testing Category: ${category}`} */}
       <Layout />
-      <Container style={{marginTop: "400px"}}>
-        <CategorySelector 
-          category={category}
-          setCategory={setCategory}
-          />
-        {/* <AddModal /> */}
-        <ResourcesContainer 
-          resources={resources}
-          category={category}
-          />
+      <Container style={{ marginTop: "400px" }}>
+        <CategorySelector category={category} setCategory={setCategory} />
+        <AddModal />
+        <ResourcesContainer resources={resources} category={category} />
       </Container>
       <Footer />
     </Container>
@@ -47,8 +45,6 @@ const ResourcesApp = () => {
 };
 
 export default ResourcesApp;
-
-
 
 //? UseState if we need it!
 
@@ -62,7 +58,6 @@ export default ResourcesApp;
 //? Post MVP State needs
 //? zipCode: default: zip for handling search -> to be used to find coordinates and currentLocation | will controlled by LocationSearch (input + button)
 //? currentLocation: default: New York - string - will be used to hold state for currentLocation which will control area of supplies | will controlled by LocationSearch (input + button)
-
 
 //? useReducer set-up for later
 

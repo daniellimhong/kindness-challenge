@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { Server, Model} from 'miragejs';
+import { Server, Model } from "miragejs";
 
 ReactDOM.render(
   // <React.StrictMode>
