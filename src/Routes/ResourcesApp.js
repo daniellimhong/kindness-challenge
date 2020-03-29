@@ -3,6 +3,7 @@ import NavBar from "../Components/Reusable/NavBar";
 import Layout from "../Components/Resources/Layout";
 import Footer from "../Components/Reusable/Footer";
 import LocationSearch from "../Components/Reusable/LocationSearch";
+import CategorySelector from "../Components/Resources/CategorySelector";
 import { Container, Button, Input, Text } from "../StyledComponents";
 import styled from "styled-components";
 
@@ -57,15 +58,15 @@ const ResourcesApp = () => {
   ] = useAppReducer();
 
   return (
-    <Container>
+    <Container width="100%" display="flex" alignItems="center" justifyContent="center">
       <NavBar />
       <LocationSearch
         setZip={event => dispatch({ type: "SET_ZIP", zip: event.target.value })}
       />
-      {`Testing Zip: ${zipCode}`}
+      {/* {`Testing Zip: ${zipCode}`} */}
       <Layout />
       {/* <AddModal /> */}
-      {/* <CategorySelector /> */}
+      <CategorySelector />
       {/* <ResourcesContainer /> */}
       <Footer />
     </Container>
@@ -83,10 +84,12 @@ export default ResourcesApp;
 // const [category, setCategory] = useState("all");
 
 //! Notes!!
-//* State List: category, zip/location for map, isAddModal, resourcesData (holds at the supply cards and shit)
+//* State List: category, zip for map, isAddModal, resourcesData (holds at the supply cards and shit)
 
 //! State Tree
-//* location: default: object of coordinates of New York | will controlled by LocationSearch (input + button)
 //* isAddModal: default: false. when true, the modal will appear | will controlled by AddModal
 //* resources: default: [] | pass down to ResourcesConatainer to display the results
-//* category: default: "All" | controlled by CategorySelector\
+//* category: default: "All" filters resources by category| controlled by CategorySelector
+//? Post MVP State needs
+//? zipCode: default: zip for handling search -> to be used to find coordinates and currentLocation | will controlled by LocationSearch (input + button)
+//? currentLocation: default: New York - string - will be used to hold state for currentLocation which will control area of supplies | will controlled by LocationSearch (input + button)

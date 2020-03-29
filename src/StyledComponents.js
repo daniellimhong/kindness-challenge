@@ -4,10 +4,10 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: ${props => props.width},
     height: ${props => props.height},
-    // display: ${props => props.isFlex === true ? "flex" : ""},
-    // flex-direction: ${props => props.isColumn === true ? "column" : "row"},
-    // align-items: ${props => props.alignItems},
-    // justify-content: ${props => props.justifyContent}
+    display: ${props => props.display},
+    flex-direction: ${props => props.flexDirection},
+    align-items: ${props => props.alignItems},
+    justify-content: ${props => props.justifyContent}
     // border: ${props => props.testBorder === true ? "1px solid black" : ""}
 `
 
