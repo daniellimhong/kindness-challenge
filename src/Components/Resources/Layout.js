@@ -4,8 +4,10 @@ import styled from "styled-components";
 
 const mapStyle = {
   height: "50%",
-  width: "100vw"
+  width: "100vw",
+  position: "absolute",
 };
+
 class GoogleMap extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +15,6 @@ class GoogleMap extends Component {
   render() {
     const { google } = this.props;
     return (
-      <div className="map-container">
         <Map
           google={google}
           zoom={10}
@@ -25,7 +26,6 @@ class GoogleMap extends Component {
         >
           <Marker position={{ lat: 40.712772, lng: -74.006058 }} />
         </Map>
-      </div>
     );
   }
 }
