@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo.png'
 import styled from 'styled-components';
 
 const NavContainer = styled.div`
@@ -8,6 +9,7 @@ const NavContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0 20px 0;
 `
 const Ul = styled.ul`
     display: flex;
@@ -35,14 +37,20 @@ const StyledLink = styled(Link)`
     }
 `;
 
+const Logo = styled.img`
+    width: 500px;
+    height: 100px;
+
+    &:hover{
+        cursor: pointer;
+    }
+`
+
 const NavBar = () => {
 
     return (
         <NavContainer>
-            <div style={{marginLeft: "50px"}}>
-                {/* Add logo - Temp placeholder for logo */}
-                <h2>LOGO</h2>
-            </div>
+            <Link to="/"><Logo src={logo} alt="logo"/></Link>
             <Ul>
                 <List>
                     <StyledLink to="/inspiration">Inspiration</StyledLink>
