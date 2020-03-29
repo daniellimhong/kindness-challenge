@@ -10,11 +10,7 @@ const Container = styled.div`
 `;
 
 const ResourcesContainer = props => {
-  const { resources, category } = props;
-
-  let filteredResources = resources.filter(resource => {
-    return resource.category === category;
-  });
+  const { resources, category, filteredResources } = props;
 
   return (
     <Container>
