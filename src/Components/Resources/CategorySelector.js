@@ -5,7 +5,7 @@ const CategoryContainer = styled.div`
     width: 100%
     margin-top: 400px;
     height: 60px;
-    border: 1px solid black;
+    border-top: 1px solid grey;
     display: flex;
     justify-content: center;
     align-items: center;

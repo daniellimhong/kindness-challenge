@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import styled from "styled-components";
-import { nominalTypeHack } from "prop-types";
 
 const mapStyle = {
   height: "400px",

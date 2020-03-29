@@ -1,28 +1,34 @@
-import React, { useState, useReducer } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../Components/Reusable/NavBar";
 import Layout from "../Components/Resources/Layout";
 import AddModal from "../Components/Resources/AddModal";
 import Footer from "../Components/Reusable/Footer";
 import LocationSearch from "../Components/Reusable/LocationSearch";
 import CategorySelector from "../Components/Resources/CategorySelector";
+import ResourcesContainer from '../Components/Resources/ResourcesContainer';
 import { Container, Button, Input, Text } from "../StyledComponents";
-import styled from "styled-components";
+import { resourcesData } from '../data'
+
 
 const ResourcesApp = () => {
+  const [zip, setZip] = useState(0);
+  const [isAddModal, setAddModal] = useState(false);
+  const [resources, setResources] = useState([]);
+  const [category, setCategory] = useState("all");
 
-const [zip, setZip] = useState(0);
-const [isAddModal, setAddModal] = useState(false);
-const [resources, setResources] = useState([]);
-const [category, setCategory] = useState("all");
+  useEffect(() => {
+    setResources(resourcesData)
+  }, [])
 
+  console.log(resources)
 
   return (
     <Container width="100%" display="flex" alignItems="center" justifyContent="center">
       <NavBar />
-      <LocationSearch
+      {/* <LocationSearch
         setZip={setZip}
-      />
-      {`Testing Category: ${category}`}
+      /> */}
+      {/* {`Testing Category: ${category}`} */}
       <Layout />
       <Container style={{marginTop: "400px"}}>
         <CategorySelector 
@@ -30,7 +36,10 @@ const [category, setCategory] = useState("all");
           setCategory={setCategory}
           />
         {/* <AddModal /> */}
-        {/* <ResourcesContainer /> */}
+        <ResourcesContainer 
+          resources={resources}
+          category={category}
+          />
       </Container>
       <Footer />
     </Container>
@@ -56,8 +65,6 @@ export default ResourcesApp;
 
 
 //? useReducer set-up for later
-
-
 
 // const useAppReducer = () => {
 //   const [state, dispatch] = useReducer(
