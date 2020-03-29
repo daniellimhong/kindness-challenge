@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
 import NavBar from "../Components/Reusable/NavBar";
 import Layout from "../Components/Resources/Layout";
+import AddModal from "../Components/Resources/AddModal";
 import Footer from "../Components/Reusable/Footer";
 import LocationSearch from "../Components/Reusable/LocationSearch";
 import CategorySelector from "../Components/Resources/CategorySelector";
@@ -63,10 +64,10 @@ const ResourcesApp = () => {
       <LocationSearch
         setZip={event => dispatch({ type: "SET_ZIP", zip: event.target.value })}
       />
-      {/* {`Testing Zip: ${zipCode}`} */}
+      {`Testing Zip: ${zipCode}`}
+      <AddModal />
       <Layout />
-      {/* <AddModal /> */}
-      <CategorySelector />
+      {/* <CategorySelector /> */}
       {/* <ResourcesContainer /> */}
       <Footer />
     </Container>

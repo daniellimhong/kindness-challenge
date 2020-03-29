@@ -17,9 +17,9 @@ class GoogleMap extends Component {
     return (
         <Map
           google={google}
-          zoom={10}
+          zoom={11}
           style={mapStyle}
-          minZoom={2}
+          minZoom={5}
           maxZoom={15}
           initialCenter={{ lat: 40.712772, lng: -74.006058 }}
           disableDefaultUI={true}
