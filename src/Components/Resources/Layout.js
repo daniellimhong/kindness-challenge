@@ -12,7 +12,6 @@ const containerStyle = {
 
 const GoogleMap = props => {
   const { google } = props;
-
   return (
     <Map
       google={google}
