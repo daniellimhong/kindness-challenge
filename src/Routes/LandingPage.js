@@ -16,14 +16,16 @@ const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     color: white;
   }
   h1 {
     font-size: 50px;
-    font-family: "Architects Daughter", cursive;
+    font-family: Lato;
   }
   h2 {
-    font-family: "Architects Daughter", cursive;
+    font-family: Lato;
+    font-size: 30px;
   }
 `;
 
@@ -35,6 +37,7 @@ const LandingPage = () => {
         <div className="title-container">
           <h1>The Kindness Challenge</h1>
           <h2>A community driven effort to help those impacted by COVID-19</h2>
+          <button></button>
         </div>
       </HeaderContainer>
       <Footer />

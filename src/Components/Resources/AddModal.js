@@ -47,3 +47,27 @@ const ModalContainer = styled.div`
     justify-content: center;
   }
 `;
+
+      // {/* Dummy code */}
+      // <input resourceName/>  
+      // <textarea description/> 
+      // <input address/> 
+      // <select category>
+      //   <option value="toiletries">Toiletries</option>
+      //   <option value="food & water"></option>
+      //   <option value="hygiene"></option>
+      //   <option value="other"></option>
+      // </select> 
+      // {/* emoji */}
+      // <button onClick={
+      //   ADD THE INPUTS AS AN OBJECT TO RESOURCES STATE (ARRAY)}
+      //   () =>  {
+      //     setResources(
+      //       ...resources,
+      //       {
+      //         id: resources.length + 1,
+              
+      //       }
+      //     )
+      //   }
+      // >Add resource</button>
