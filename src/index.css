@@ -347,3 +347,11 @@ template {
 [hidden] {
   display: none;
 }
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  outline: none;
+}
