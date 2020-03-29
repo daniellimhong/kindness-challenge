@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import styled from "styled-components";
+import { nominalTypeHack } from "prop-types";
 
 const mapStyle = {
-  height: "50%",
+  height: "400px",
   width: "100vw",
-  position: "absolute",
 };
+
+const containerStyle = {
+  position: "relative"
+}
 
 class GoogleMap extends Component {
   constructor(props) {
@@ -18,6 +22,7 @@ class GoogleMap extends Component {
         <Map
           google={google}
           zoom={11}
+          containerStyle={containerStyle}
           style={mapStyle}
           minZoom={5}
           maxZoom={15}
