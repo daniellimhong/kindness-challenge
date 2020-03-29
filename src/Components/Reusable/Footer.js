@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Text } from '../../StyledComponents'
 
 const FooterContainer = styled.div`
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 50px;
@@ -11,8 +11,9 @@ const FooterContainer = styled.div`
     // align-items: center;
     // justify-content: center;
     text-align: center;
-    // margin: 0 auto;
+    margin-top: 20px;
     border-top: 1px solid black;
+    overflow: hidden;
 `
 
 const ExternalLink = styled.a`
