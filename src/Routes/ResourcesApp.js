@@ -1,16 +1,70 @@
-import React from "react";
+import React, { useState, useReducer } from "react";
 import NavBar from "../Components/Reusable/NavBar";
 import Layout from "../Components/Resources/Layout";
 import Footer from "../Components/Reusable/Footer";
+import LocationSearch from "../Components/Reusable/LocationSearch";
 import { Container, Button, Input, Text } from "../StyledComponents";
 import styled from "styled-components";
 
+const useAppReducer = () => {
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "SET_ZIP": {
+          return {
+            ...state,
+            zipCode: action.zip
+          };
+        }
+        case "TOGGLE_ADD_MODAL": {
+          return {
+            ...state,
+            isAddModal: !state.isAddModal
+          };
+        }
+        case "SET_RESOURCES": {
+          return {
+            ...state,
+            resources: [action.value]
+          };
+        }
+        case "SET_CATEGORY": {
+          return {
+            ...state,
+            category: action.value
+          };
+        }
+        default: {
+          return state;
+        }
+      }
+    },
+    {
+      zipCode: 0,
+      currentLocation: "", //set this to new york zip as default
+      isAddModal: false,
+      resources: [],
+      category: "all"
+    }
+  );
+  return [state, dispatch];
+};
+
 const ResourcesApp = () => {
+  let [
+    { zipCode, curerntLocation, isAddModal, resources, category },
+    dispatch
+  ] = useAppReducer();
+
   return (
     <Container>
       <NavBar />
+      <LocationSearch
+        setZip={event => dispatch({ type: "SET_ZIP", zip: event.target.value })}
+      />
+      {`Testing Zip: ${zipCode}`}
       <Layout />
-      {/* <LocationSearch /> */}
+      {/* <AddModal /> */}
       {/* <CategorySelector /> */}
       {/* <ResourcesContainer /> */}
       <Footer />
@@ -20,5 +74,19 @@ const ResourcesApp = () => {
 
 export default ResourcesApp;
 
-//! Main Application: Will hold majority of state
-//* State: category, zip/location for map, isAddModal, resourcesData (holds at the supply cards and shit)
+//? useReducer set-up for later
+
+//? UseState if we need it!
+// const [location, setLocation] = useState({ lat: 40.712772, lng: -74.006058 });
+// const [isAddModal, setAddModal] = useState(false);
+// const [resources, setResources] = useState([]);
+// const [category, setCategory] = useState("all");
+
+//! Notes!!
+//* State List: category, zip/location for map, isAddModal, resourcesData (holds at the supply cards and shit)
+
+//! State Tree
+//* location: default: object of coordinates of New York | will controlled by LocationSearch (input + button)
+//* isAddModal: default: false. when true, the modal will appear | will controlled by AddModal
+//* resources: default: [] | pass down to ResourcesConatainer to display the results
+//* category: default: "All" | controlled by CategorySelector\
