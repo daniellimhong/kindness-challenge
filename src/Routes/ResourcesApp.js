@@ -11,16 +11,20 @@ import { resourcesData } from '../data'
 
 
 const ResourcesApp = () => {
-  const [zip, setZip] = useState(0);
+  // const [zip, setZip] = useState(0);
   const [isAddModal, setAddModal] = useState(false);
   const [resources, setResources] = useState([]);
   const [category, setCategory] = useState("all");
 
+  //* Initial Data Call
   useEffect(() => {
     setResources(resourcesData)
   }, [])
 
-  console.log(resources)
+  //* Filtering Resource based on category
+  const filteredResources = resources.filter(resource => {
+    return resource.category === category;
+  });
 
   return (
     <Container width="100%" display="flex" alignItems="center" justifyContent="center">
@@ -39,6 +43,7 @@ const ResourcesApp = () => {
         <ResourcesContainer 
           resources={resources}
           category={category}
+          filteredResources={filteredResources}
           />
       </Container>
       <Footer />
