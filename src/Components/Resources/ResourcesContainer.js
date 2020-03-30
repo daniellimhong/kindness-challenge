@@ -10,16 +10,22 @@ const Container = styled.div`
 `;
 
 const ResourcesContainer = props => {
-  const { resources, category, filteredResources } = props;
+  const {
+    resources,
+    resourceName,
+    category,
+    filteredResources,
+    description
+  } = props;
 
   return (
     <Container>
       {category === "all"
         ? resources.map(card => {
-            return <ResourceCard key={card.id} category={card.category}/>;
+            return <ResourceCard key={card.id} category={card.category} />;
           })
         : filteredResources.map(card => {
-            return <ResourceCard key={card.id} category={card.category}/>;
+            return <ResourceCard key={card.id} category={card.category} />;
           })}
     </Container>
   );

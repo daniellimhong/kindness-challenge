@@ -1,7 +1,10 @@
 import React, { Component, useState, useEffect } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
+<<<<<<< HEAD
 import Geocode from 'react-geocode';
 import styled from "styled-components";
+=======
+>>>>>>> 827e47ab9f4dad9404043acaa374c3c39beb3762
 
 const mapStyle = {
   height: "400px",
@@ -13,6 +16,7 @@ const containerStyle = {
 };
 
 const GoogleMap = props => {
+<<<<<<< HEAD
   const { google, filteredResource, resources, category } = props;
   const {REACT_APP_GOOGLE_KEY} = process.env;
 
@@ -60,6 +64,9 @@ const GoogleMap = props => {
   })
   
 
+=======
+  const { google } = props;
+>>>>>>> 827e47ab9f4dad9404043acaa374c3c39beb3762
   return (
     <Map
       google={google}
@@ -71,6 +78,7 @@ const GoogleMap = props => {
       initialCenter={{ lat: 40.712772, lng: -74.006058 }}
       disableDefaultUI={true}
     >
+<<<<<<< HEAD
       {/* <Marker position={{ lat: 40.712772, lng: -74.006058 }} />
       <Marker position={{ lat: 40.6912654, lng: -73.982912 }} /> */}
 
@@ -89,6 +97,9 @@ const GoogleMap = props => {
       {/* {actuallyMappedMarkers} */}
       
 
+=======
+      <Marker position={{ lat: 40.712772, lng: -74.006058 }} />
+>>>>>>> 827e47ab9f4dad9404043acaa374c3c39beb3762
     </Map>
   );
 };

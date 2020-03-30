@@ -25,7 +25,9 @@ function AddModal() {
         <button onClick={() => setIsOpen(!isOpen)}>toggle modal</button>
         {isOpen ? (
           <div className="modal">
-            <p>Modal is open</p>
+            <input placeholder="Name"></input>
+            <input placeholder="Address"></input>
+            <textarea placeholder="Description"></textarea>
           </div>
         ) : null}
       </div>
