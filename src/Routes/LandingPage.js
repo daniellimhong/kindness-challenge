@@ -7,14 +7,14 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)),
     url(${background});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
   .title-container {
-    height: 300px;
+    height: 400px;
     width: 800px;
     display: flex;
     align-items: start;
@@ -33,12 +33,12 @@ const HeaderContainer = styled.div`
   h2 {
     font-family: Lato;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 100;
   }
   .gsbutton {
     height: 60px;
     width: 150px;
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 20px;
     background-color: #827fd9;
     color: white;
