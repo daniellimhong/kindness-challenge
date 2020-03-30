@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import Geocode from "react-geocode";
 import styled from "styled-components";
+import { resourcesData } from "../../data";
 const mapStyle = {
   height: "400px",
   width: "100vw"
@@ -67,7 +68,7 @@ const GoogleMap = props => {
       
     };
     promiseCoordinates();
-  }, [category]);
+  }, [category, resources]);
 
   console.log("mappedMarkers", markers);
   return (

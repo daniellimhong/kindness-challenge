@@ -12,12 +12,17 @@ const FooterContainer = styled.div`
   // justify-content: center;
   text-align: center;
   margin-top: 20px;
-  border-top: 1px solid black;
+  // border-top: 1px solid black;
   overflow: hidden;
 `;
 
 const ExternalLink = styled.a`
   color: #d3d3d3;
+  transition: 0.4s ease;
+
+  &:hover{
+    color: grey;
+  }
 
   &:focus,
   &:hover,
@@ -37,18 +42,15 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <Text color="#D3D3D3">
-        Built with{" "}
-        <span role="img" aria-label="heart">
-          &#x2764;&#xfe0f;
-        </span>
-        and <span>&#9774;</span>
-        <ExternalLink
-          href={`https://github.com/${githubUser}/kindness-challenge/`}
-        >
-          View Source Code Here
+      <Text style={{userSelect: "none"}} color="#D3D3D3">
+        Built with kindness &#8212;
+        &nbsp; 
+        <ExternalLink href={`https://github.com/${githubUser}/kindness-challenge/`}>
+          View Source
         </ExternalLink>
       </Text>
+
+
     </FooterContainer>
   );
 };

@@ -2,10 +2,10 @@ export const resourcesData = [
   {
     id: 1,
     resourceName: "12pk toilet paper",
-    description: "Stocks every other weekend at Target",
+    description: "Stocks every other weekend at Target, Limit 1 per customer",
     category: "toiletries",
     address: "445 Albee Square W, Brooklyn, NY 11201",
-    emoji: ""
+    emoji: "🧻"
   },
   {
     id: 2,
@@ -13,15 +13,15 @@ export const resourcesData = [
     description: "Limit 1 per customer at NYC Fresh Market",
     category: "hygiene",
     address: "150 Myrtle Ave, Brooklyn, NY 11201",
-    emoji: ""
+    emoji: "🧽"
   },
   {
     id: 3,
-    resourceName: "Diapers",
-    description: "Sufficient supply at Wegmans",
-    category: "other",
-    address: "21 Flushing Ave, Brooklyn, NY 11205",
-    emoji: ""
+    resourceName: "Pack of gloves",
+    description: "Limited supply at Walgreens",
+    category: "hygiene",
+    address: "20 Astor Pl, New York, NY 10003",
+    emoji: "🧤"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const resourcesData = [
     description: "Sufficient supply at Trader Joes",
     category: "toiletries",
     address: "445 Gold St, Brooklyn, NY 11201",
-    emoji: ""
+    emoji: "🧴"
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const resourcesData = [
     description: "Limit 2 per customer at Gold Organic Farm",
     category: "other",
     address: "277 Gold St, Brooklyn, NY 11201",
-    emoji: ""
+    emoji: "🧻"
   },
 
   {
@@ -46,16 +46,16 @@ export const resourcesData = [
     description: "Sufficient supply at Amish Market",
     category: "food & water",
     address: "53 Park Pl, New York, NY 10007",
-    emoji: ""
+    emoji: "💧"
   },
 
   {
     id: 7,
-    resourceName: "Eggs",
+    resourceName: "Tylenol",
     description: "Limit 2 per customer at Whole Foods",
-    category: "food & water",
+    category: "other",
     address: "270 Greenwich St, New York, NY 10007",
-    emoji: ""
+    emoji: "💊"
   },
   {
     id: 8,
@@ -63,15 +63,15 @@ export const resourcesData = [
     description: "Stocks every Tuesdays at Key Food",
     category: "other",
     address: "55 Fulton St, New York, NY 10038",
-    emoji: ""
+    emoji: "🧴"
   },
   {
     id: 9,
     resourceName: "Hand soap",
-    description: "Sufficient supply at CVS",
-    category: "toiletries",
+    description: "Limited supply at CVS",
+    category: "hygiene",
     address: "129 Fulton St, New York, NY 10038",
-    emoji: ""
+    emoji: "🧼"
   },
   {
     id: 10,
@@ -79,15 +79,15 @@ export const resourcesData = [
     description: "Limited supply at All In One Mart",
     category: "food & water",
     address: "79 Henry St, Brooklyn, NY 11231",
-    emoji: ""
+    emoji: "🥩"
   },
   {
     id: 11,
     resourceName: "Hand sanitizer",
-    description: "Limit per customer at Duane Reade",
+    description: "Limit 1 per customer at Duane Reade, extremely limited",
     category: "hygiene",
     address: "305 Broadway, New York, NY 10007",
-    emoji: ""
+    emoji: "🧼"
   },
   {
     id: 12,
@@ -95,7 +95,15 @@ export const resourcesData = [
     description: "Limited supply at Walgreens",
     category: "food & water",
     address: "20 Astor Pl, New York, NY 10003",
-    emoji: ""
+    emoji: "💧"
+  },
+  {
+    id: 13,
+    resourceName: "Diapers",
+    description: "Sufficient supply at Wegmans",
+    category: "other",
+    address: "21 Flushing Ave, Brooklyn, NY 11205",
+    emoji: "🛒"
   }
 ];
 
