@@ -1,4 +1,5 @@
 import React from "react";
+import AddModal from './AddModal';
 import styled from "styled-components";
 
 const CategoryContainer = styled.div`
@@ -46,7 +47,7 @@ const stateStyle = {
 };
 
 const CategorySelector = props => {
-  const { category, setCategory } = props;
+  const { category, setCategory, isAddModal, setAddModal, resourcesData } = props;
 
   return (
     <CategoryContainer>
@@ -79,8 +80,11 @@ const CategorySelector = props => {
           )}
         </StyledWrapper>
         <Wrapper>
-          {/* MODAL HERE */}
-          <Category>(MODAL HERE)</Category>
+          <AddModal 
+            isAddModal={isAddModal}
+            setAddModal={setAddModal}
+            resourcesData={resourcesData}
+          />
         </Wrapper>
       </ChildContainer>
     </CategoryContainer>
