@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Text } from "../../StyledComponents";
 
 const FooterContainer = styled.div`
+  // z-index: -999999;
   position: fixed;
   bottom: 0;
   width: 100%;
