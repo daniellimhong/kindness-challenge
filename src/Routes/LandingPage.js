@@ -14,6 +14,7 @@ const HeaderContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  z-index: -1;
   
   .title-container {
     height: 400px;
@@ -52,6 +53,10 @@ const HeaderContainer = styled.div`
     }
   }
 `;
+
+const LandingFooter = styled(Footer)`
+  z-index: 100000;
+`
 
 const LandingPage = () => {
 
@@ -98,7 +103,8 @@ const LandingPage = () => {
           </div>
         </div>
       </HeaderContainer>
-      <Footer />
+      <Footer/>
+      {/* <LandingFooter/> */}
     </div>
   );
 };

@@ -10,6 +10,7 @@ const TeamContainer = styled.div`
   // height: 80%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-top: 20px;
 
   h2{
@@ -22,6 +23,7 @@ const TeamContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 
   }
 
@@ -115,8 +117,21 @@ const TeamPage = () => {
               </ul>
             </div>
           </div>
+          <div className="card">
+            <div className="text-card" style={{width: "100%"}}>
+              <div className="header-card">
+                <h2>Contributors</h2>
+              </div>
+              <ul>
+                <li>Sean Parmar - Developer Consultant</li>
+                <li>Andrew Nam - Developer Consultant</li>
+                <li>Joshua Suos - Copywrite</li>
+                <li>Michael Orbeta - Emoji Master</li>
+              </ul>
+            </div>
+          </div>
       </TeamContainer>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

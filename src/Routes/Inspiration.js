@@ -5,13 +5,8 @@ import background from "../assets/inspiration.jpg";
 import styled from "styled-components";
 
 const Container = styled.div`
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-    // margin-top: 200px;
+  margin-top: 200px;
+  display: flex;
 `;
 
 const Picture = styled.div`
@@ -22,17 +17,15 @@ const Picture = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-//   border: 1px solid black;
-  margin-left: 2%;
+
 `;
 
 const TextBox = styled.div`
   width: 50%;
-  height: 38vh;
-//   background-color: #5edfff;
-//   border: 1px solid #5edfff;
-  margin-top: 20px;
-  margin-left: 48%;
+//   height: 38vh;
+    margin: 0;
+padding-bottom: 20px;
+  margin-left: 1rem;
   text-indent: 3rem;
   letter-spacing: 3px;
   word-spacing: 4px;
@@ -40,8 +33,8 @@ const TextBox = styled.div`
   font-weight: 500;
 
   h2 {
-      font-size: 1.8rem;
-      
+    font-size: 1.8rem;
+    margin-bottom: 20px
   }
 `;
 
@@ -51,13 +44,18 @@ const InspirationPage = () => {
       <NavBar />
       <Container>
         <TextBox>
-            <h2>
-             As we face a worldwide epidemic, we also face challenges that disrupt our livelihoods. This consists of the inability to find everyday essentials that we need in order to survive and maintain  a profound quality of life. With the Kindness Challenge, our goal is to bring our communitues together to overcome these adversities by providing the resources needed to those that are struggling. Together, we set to overcome COVID-19 and improve the lives of many.
-            </h2>
+          <h2>
+            As we face a worldwide epidemic, we also face challenges that
+            disrupt our livelihoods. This consists of the inability to find
+            everyday essentials that we need in order to survive and maintain a
+            profound quality of life. With the Kindness Challenge, our goal is
+            to bring our communitues together to overcome these adversities by
+            providing the resources needed to those that are struggling.
+            Together, we set to overcome COVID-19 and improve the lives of many.
+          </h2>
         </TextBox>
         <Picture />
       </Container>
-      <Footer />
     </>
   );
 };
