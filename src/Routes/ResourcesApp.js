@@ -24,7 +24,6 @@ const ResourcesApp = () => {
   const filteredResources = resources.filter(resource => {
     return resource.category === category;
   });
-
   return (
     <Container
       width="100%"
