@@ -32,8 +32,12 @@ const ResourcesApp = () => {
       {/* <LocationSearch
         setZip={setZip}
       /> */}
-      {/* {`Testing Category: ${category}`} */}
-      <Layout />
+
+      <Layout 
+        resources={resources}
+        category={category}
+        filteredResources={filteredResources}      
+      />
       <Container style={{marginTop: "400px"}}>
         <CategorySelector 
           category={category}
