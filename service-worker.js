@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kindness-challenge/precache-manifest.0d757cb37bc8d48ed3047a20818f20c6.js"
+  "/kindness-challenge/precache-manifest.298c1edc258ae6d62fd864357d20c688.js"
 );
 
 self.addEventListener('message', (event) => {

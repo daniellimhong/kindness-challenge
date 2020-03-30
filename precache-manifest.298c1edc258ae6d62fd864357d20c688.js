@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3f543e5cb85cdeeea80024d3bfddb233",
+    "revision": "936837d75f64ff2e0b2f56f9288e5b4a",
     "url": "/kindness-challenge/index.html"
   },
   {
-    "revision": "85b3b477f6e5b1b1126e",
+    "revision": "e4fda2a185ba4696ece8",
     "url": "/kindness-challenge/static/css/main.d3c4f40c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kindness-challenge/static/js/2.6715f106.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85b3b477f6e5b1b1126e",
-    "url": "/kindness-challenge/static/js/main.9c5cd12c.chunk.js"
+    "revision": "e4fda2a185ba4696ece8",
+    "url": "/kindness-challenge/static/js/main.d047a8c7.chunk.js"
   },
   {
     "revision": "bec850dcfc9a455ac6bd",
