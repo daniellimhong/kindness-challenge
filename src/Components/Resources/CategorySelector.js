@@ -38,12 +38,13 @@ const Category = styled.button`
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    color: #b2fcff;
+    // transform: scale(1.05);
   }
 `;
 
 const stateStyle = {
-  color: "#5edfff" //! change color later
+  color: "#5edfff"
 };
 
 const CategorySelector = props => {
@@ -79,13 +80,12 @@ const CategorySelector = props => {
             <Category onClick={() => setCategory("other")}>Other</Category>
           )}
         </StyledWrapper>
-        <Wrapper>
           <AddModal 
             isAddModal={isAddModal}
             setAddModal={setAddModal}
+            setCategory={setCategory}
             resourcesData={resourcesData}
           />
-        </Wrapper>
       </ChildContainer>
     </CategoryContainer>
   );
