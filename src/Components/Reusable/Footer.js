@@ -39,7 +39,7 @@ const Footer = () => {
     const currentDate = new Date().getHours();
     return currentDate % 2 === 1 ? "daniellimhong" : "austinchabaud";
   };
-  const githubUser = "daniellimhong"
+  const githubUser = chooseGithub();
 
   return (
     <FooterContainer>
