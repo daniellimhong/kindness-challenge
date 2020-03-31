@@ -24,7 +24,7 @@ const GoogleMap = props => {
   useEffect(() => {
     const promiseCoordinates = async () => {
       //! Render Markers based on Category
-      if (category === "all"){
+      if (category === "all") {
         return setMarkers(
           await Promise.all(
             resources.map(async resource => {
@@ -65,7 +65,7 @@ const GoogleMap = props => {
           )
         );
       }
-      
+
     };
     promiseCoordinates();
   }, [category, resources]);

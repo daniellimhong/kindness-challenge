@@ -30,20 +30,19 @@ const ResourcesApp = () => {
       justifyContent="center"
     >
       <NavBar />
-
-      <Layout 
+      <Layout
         resources={resources}
         category={category}
-        filteredResources={filteredResources}      
+        filteredResources={filteredResources}
       />
-      <Container style={{marginTop: "400px"}}>
-        <CategorySelector 
+      <Container style={{ marginTop: "400px" }}>
+        <CategorySelector
           category={category}
           setCategory={setCategory}
           isAddModal={isAddModal}
           setAddModal={setAddModal}
           resourcesData={resourcesData}
-          />
+        />
         {/* <AddModal /> */}
         <ResourcesContainer
           resources={resources}
