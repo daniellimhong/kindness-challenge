@@ -27,9 +27,8 @@ const StyledLink = styled(Link)`
   transition: ease 0.2s;
 
   &:hover {
-    color: blue; //change
+    color: #5edfff; 
     cursor: pointer;
-    transform: scale(1.05); //change
   }
 
   &:focus,
