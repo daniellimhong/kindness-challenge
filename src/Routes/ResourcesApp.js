@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Components/Reusable/NavBar";
 import Layout from "../Components/Resources/Layout";
-import AddModal from "../Components/Resources/AddModal";
 import Footer from "../Components/Reusable/Footer";
-import LocationSearch from "../Components/Reusable/LocationSearch";
 import CategorySelector from "../Components/Resources/CategorySelector";
 import ResourcesContainer from "../Components/Resources/ResourcesContainer";
-import { Container, Button, Input, Text } from "../StyledComponents";
+import { Container } from "../StyledComponents";
 import { resourcesData } from "../data";
 
 const ResourcesApp = () => {
@@ -32,13 +30,19 @@ const ResourcesApp = () => {
       justifyContent="center"
     >
       <NavBar />
-      {/* <LocationSearch
-        setZip={setZip}
-      /> */}
-      {/* {`Testing Category: ${category}`} */}
-      <Layout />
+      <Layout
+        resources={resources}
+        category={category}
+        filteredResources={filteredResources}
+      />
       <Container style={{ marginTop: "400px" }}>
-        <CategorySelector category={category} setCategory={setCategory} />
+        <CategorySelector
+          category={category}
+          setCategory={setCategory}
+          isAddModal={isAddModal}
+          setAddModal={setAddModal}
+          resourcesData={resourcesData}
+        />
         {/* <AddModal /> */}
         <ResourcesContainer
           resources={resources}
@@ -46,7 +50,7 @@ const ResourcesApp = () => {
           filteredResources={filteredResources}
         />
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </Container>
   );
 };
