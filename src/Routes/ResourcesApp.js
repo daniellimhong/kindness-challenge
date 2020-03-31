@@ -35,24 +35,10 @@ const ResourcesApp = () => {
       {/* <LocationSearch
         setZip={setZip}
       /> */}
-<<<<<<< HEAD
-
-      <Layout 
-        resources={resources}
-        category={category}
-        filteredResources={filteredResources}      
-      />
-      <Container style={{marginTop: "400px"}}>
-        <CategorySelector 
-          category={category}
-          setCategory={setCategory}
-          />
-=======
       {/* {`Testing Category: ${category}`} */}
       <Layout />
       <Container style={{ marginTop: "400px" }}>
         <CategorySelector category={category} setCategory={setCategory} />
->>>>>>> 827e47ab9f4dad9404043acaa374c3c39beb3762
         {/* <AddModal /> */}
         <ResourcesContainer
           resources={resources}
