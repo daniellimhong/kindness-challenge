@@ -1,6 +1,6 @@
 # The Kindness Project
 
-Live Demo: daniellimhong.github.io/kindness-challenge
+Live Demo: [Here](daniellimhong.github.io/kindness-challenge)
 
 ## **Inspiration**
 
