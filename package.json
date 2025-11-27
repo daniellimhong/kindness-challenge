@@ -14,7 +14,7 @@
     "env": "0.0.2",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.2",
-    "googleapis": "^48.0.0",
+    "googleapis": "^166.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -24,7 +24,7 @@
     "react-places-autocomplete": "^7.2.1",
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "styled-components": "^5.0.1"
   },
   "scripts": {
